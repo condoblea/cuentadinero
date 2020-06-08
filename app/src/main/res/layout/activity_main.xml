@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="cuentaViewModel"
+            type="com.example.cuentadinero.CuentaViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        tools:layout_editor_absoluteX="145dp"
+        tools:layout_editor_absoluteY="171dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/text1000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:text="1000"
+                    android:textSize="@dimen/textSize"
+                    app:layout_constraintBaseline_toBaselineOf="@id/editText1000"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/text500"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="500"
+                    android:textSize="@dimen/textSize"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/editText500"
+                    app:layout_constraintEnd_toEndOf="@+id/text1000" />
+
+                <TextView
+                    android:id="@+id/text200"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="200"
+                    android:textSize="@dimen/textSize"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/editText200"
+                    app:layout_constraintEnd_toEndOf="@+id/text500" />
+
+                <TextView
+                    android:id="@+id/text100"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100"
+                    android:textSize="@dimen/textSize"
+                    app:layout_constraintBottom_toTopOf="@+id/text50"
+                    app:layout_constraintEnd_toEndOf="@+id/text200"
+                    app:layout_constraintTop_toBottomOf="@+id/text200" />
+
+                <TextView
+                    android:id="@+id/text50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="50"
+                    android:textSize="@dimen/textSize"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/editText50"
+                    app:layout_constraintEnd_toEndOf="@+id/text100" />
+
+                <TextView
+                    android:id="@+id/text20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="20"
+                    android:textSize="@dimen/textSize"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/editText20"
+                    app:layout_constraintEnd_toEndOf="@+id/text50" />
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textSize="@dimen/textSize"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/editText1"
+                    app:layout_constraintEnd_toEndOf="@+id/text20" />
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/text10"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:text="10"-->
+                <!--                    android:textSize="@dimen/textSize"-->
+                <!--                    app:layout_constraintBaseline_toBaselineOf="@+id/editText10"-->
+                <!--                    app:layout_constraintEnd_toEndOf="@+id/text20" />-->
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/text5"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:text="5"-->
+                <!--                    android:textSize="@dimen/textSize"-->
+                <!--                    app:layout_constraintBaseline_toBaselineOf="@+id/editText5"-->
+                <!--                    app:layout_constraintEnd_toEndOf="@+id/text10" />-->
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/text2"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:text="2"-->
+                <!--                    android:textSize="@dimen/textSize"-->
+                <!--                    app:layout_constraintBaseline_toBaselineOf="@+id/editText2"-->
+                <!--                    app:layout_constraintEnd_toEndOf="@+id/text5" />-->
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/text05"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:text="0.5"-->
+                <!--                    android:textSize="@dimen/textSize"-->
+                <!--                    app:layout_constraintBaseline_toBaselineOf="@+id/editText05"-->
+                <!--                    app:layout_constraintEnd_toEndOf="@+id/text1" />-->
+
+
+                <EditText
+                    android:id="@+id/editText1000"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    app:layout_constraintBottom_toTopOf="@+id/editText500"
+                    app:layout_constraintEnd_toStartOf="@+id/textResult1000"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/text1000"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/editText500"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    app:layout_constraintBottom_toTopOf="@+id/editText200"
+                    app:layout_constraintEnd_toEndOf="@+id/editText1000"
+                    app:layout_constraintStart_toStartOf="@+id/editText1000"
+                    app:layout_constraintTop_toBottomOf="@+id/editText1000" />
+
+                <EditText
+                    android:id="@+id/editText200"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    app:layout_constraintBottom_toTopOf="@+id/editText100"
+                    app:layout_constraintEnd_toEndOf="@+id/editText500"
+                    app:layout_constraintStart_toStartOf="@+id/editText500"
+                    app:layout_constraintTop_toBottomOf="@+id/editText500" />
+
+                <EditText
+                    android:id="@+id/editText100"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    app:layout_constraintBottom_toTopOf="@+id/editText50"
+                    app:layout_constraintEnd_toEndOf="@+id/editText200"
+                    app:layout_constraintStart_toStartOf="@+id/editText200"
+                    app:layout_constraintTop_toBottomOf="@+id/editText200" />
+
+                <EditText
+                    android:id="@+id/editText50"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    app:layout_constraintBottom_toTopOf="@+id/editText20"
+                    app:layout_constraintEnd_toEndOf="@+id/editText100"
+                    app:layout_constraintStart_toStartOf="@+id/editText100"
+                    app:layout_constraintTop_toBottomOf="@+id/editText100" />
+
+                <EditText
+                    android:id="@+id/editText20"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    app:layout_constraintBottom_toTopOf="@+id/editText1"
+                    app:layout_constraintEnd_toEndOf="@+id/editText50"
+                    app:layout_constraintStart_toStartOf="@+id/editText50"
+                    app:layout_constraintTop_toBottomOf="@+id/editText50" />
+
+                <EditText
+                    android:id="@+id/editText1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    app:layout_constraintBottom_toTopOf="@+id/textSumaTotal"
+                    app:layout_constraintEnd_toEndOf="@+id/editText20"
+                    app:layout_constraintStart_toStartOf="@+id/editText20" />
+
+
+                <!--                <EditText-->
+                <!--                    android:id="@+id/editText10"-->
+                <!--                    android:layout_width="0dp"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:ems="10"-->
+                <!--                    android:inputType="number"-->
+                <!--                    app:layout_constraintBottom_toTopOf="@+id/editText5"-->
+                <!--                    app:layout_constraintEnd_toEndOf="@+id/editText20"-->
+                <!--                    app:layout_constraintStart_toStartOf="@+id/editText20"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/editText20" />-->
+
+                <!--                <EditText-->
+                <!--                    android:id="@+id/editText5"-->
+                <!--                    android:layout_width="0dp"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:ems="10"-->
+                <!--                    android:inputType="number"-->
+                <!--                    app:layout_constraintBottom_toTopOf="@+id/editText2"-->
+                <!--                    app:layout_constraintEnd_toEndOf="@+id/editText10"-->
+                <!--                    app:layout_constraintStart_toStartOf="@+id/editText10"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/editText10" />-->
+
+                <!--                <EditText-->
+                <!--                    android:id="@+id/editText2"-->
+                <!--                    android:layout_width="0dp"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:ems="10"-->
+                <!--                    android:inputType="number"-->
+                <!--                    app:layout_constraintBottom_toTopOf="@+id/editText1"-->
+                <!--                    app:layout_constraintEnd_toEndOf="@+id/editText5"-->
+                <!--                    app:layout_constraintStart_toStartOf="@+id/editText5"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/editText5" />-->
+
+                <!--                <EditText-->
+                <!--                    android:id="@+id/editText05"-->
+                <!--                    android:layout_width="0dp"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:ems="10"-->
+                <!--                    android:inputType="number"-->
+                <!--                    app:layout_constraintEnd_toEndOf="@+id/editText1"-->
+                <!--                    app:layout_constraintStart_toStartOf="@+id/editText1"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/editText1" />-->
+
+
+                <TextView
+                    android:id="@+id/textResult1000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{ String.valueOf(cuentaViewModel.value1000) }"
+                    android:textSize="20dp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/editText1000"
+                    app:layout_constraintStart_toStartOf="@+id/textResult500" />
+
+                <TextView
+                    android:id="@+id/textResult500"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{ String.valueOf(cuentaViewModel.value500) }"
+                    android:textSize="@dimen/textSize"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/editText500"
+                    app:layout_constraintStart_toStartOf="@+id/textResult200" />
+
+                <TextView
+                    android:id="@+id/textResult200"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{ String.valueOf(cuentaViewModel.value200) }"
+                    android:textSize="@dimen/textSize"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/editText200"
+                    app:layout_constraintStart_toStartOf="@+id/textResult100" />
+
+                <TextView
+                    android:id="@+id/textResult100"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{ String.valueOf(cuentaViewModel.value100) }"
+                    android:textSize="@dimen/textSize"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/editText100"
+                    app:layout_constraintStart_toStartOf="@+id/textResult50" />
+
+                <TextView
+                    android:id="@+id/textResult50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{ String.valueOf(cuentaViewModel.value50) }"
+                    android:textSize="@dimen/textSize"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/editText50"
+                    app:layout_constraintStart_toStartOf="@+id/textResult20" />
+
+                <TextView
+                    android:id="@+id/textResult20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{ String.valueOf(cuentaViewModel.value20) }"
+                    android:textSize="@dimen/textSize"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/editText20"
+                    app:layout_constraintStart_toStartOf="@+id/textResult1" />
+
+                <TextView
+                    android:id="@+id/textResult1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{ String.valueOf(cuentaViewModel.value1) }"
+                    android:textSize="@dimen/textSize"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/editText1"
+                    app:layout_constraintStart_toStartOf="@+id/textResult" />
+
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/textResult10"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:text="0"-->
+                <!--                    android:textSize="@dimen/textSize"-->
+                <!--                    app:layout_constraintBaseline_toBaselineOf="@+id/editText10"-->
+                <!--                    app:layout_constraintStart_toStartOf="@+id/textResult5" />-->
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/textResult5"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:text="0"-->
+                <!--                    android:textSize="@dimen/textSize"-->
+                <!--                    app:layout_constraintBaseline_toBaselineOf="@+id/editText5"-->
+                <!--                    app:layout_constraintStart_toStartOf="@+id/textResult2" />-->
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/textResult2"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:text="0"-->
+                <!--                    android:textSize="@dimen/textSize"-->
+                <!--                    app:layout_constraintBaseline_toBaselineOf="@+id/editText2"-->
+                <!--                    app:layout_constraintStart_toStartOf="@+id/textResult1" />-->
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/textResult05"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:text="0"-->
+                <!--                    android:textSize="@dimen/textSize"-->
+                <!--                    app:layout_constraintBaseline_toBaselineOf="@+id/editText05"-->
+                <!--                    tools:layout_editor_absoluteX="244dp" />-->
+
+                <TextView
+                    android:id="@+id/textSumaTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/sumaTotal"
+                    android:textSize="@dimen/textSize"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/textResult"
+                    app:layout_constraintEnd_toStartOf="@+id/textResult" />
+
+                <TextView
+                    android:id="@+id/textResult"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="@{ String.valueOf(cuentaViewModel.result) }"
+                    android:textSize="@dimen/textSize"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</layout>
