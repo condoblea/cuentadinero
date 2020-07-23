@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var viewModel: CuentaViewModel
     var cantidadesGuardadas: String? = null
+    var isUiBlocked = false;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -185,6 +186,15 @@ class MainActivity : AppCompatActivity() {
                 limpiarEntradasTexto()
                 true
             }
+            R.id.bloquearUI -> {
+                if (isUiBlocked) {
+                    desbloquearUI()
+                } else {
+                    bloquearUI()
+                }
+                isUiBlocked = !isUiBlocked
+                true
+            }
             else -> super.onOptionsItemSelected(item)
         }
     }
@@ -235,5 +245,31 @@ class MainActivity : AppCompatActivity() {
         viewModel.value20.value   = viewModel.calculaCantidad(Integer.parseInt(lista[5]), 20)
         viewModel.value1.value    = viewModel.calculaCantidad(Integer.parseInt(lista[6]), 1)
         viewModel.sumaTotal()
+    }
+
+    private fun desbloquearUI() {
+        binding.apply {
+
+            editText1000.isEnabled = isUiBlocked
+            editText500.isEnabled = isUiBlocked
+            editText200.isEnabled = isUiBlocked
+            editText100.isEnabled = isUiBlocked
+            editText50.isEnabled = isUiBlocked
+            editText20.isEnabled = isUiBlocked
+            editText1.isEnabled = isUiBlocked
+
+        }
+    }
+
+    private fun bloquearUI() {
+        binding.apply {
+            editText1000.isEnabled = isUiBlocked
+            editText500.isEnabled = isUiBlocked
+            editText200.isEnabled = isUiBlocked
+            editText100.isEnabled = isUiBlocked
+            editText50.isEnabled = isUiBlocked
+            editText20.isEnabled = isUiBlocked
+            editText1.isEnabled = isUiBlocked
+        }
     }
 }

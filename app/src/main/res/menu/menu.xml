@@ -4,5 +4,9 @@
 
     <item
         android:id="@+id/borrarTodo"
-        android:title="Borrar" />
+        android:title="@string/delete" />
+    <item
+        android:id="@+id/bloquearUI"
+        android:title="@string/blockui"
+        app:actionLayout="@layout/switch_item" />
 </menu>
